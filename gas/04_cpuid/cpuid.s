@@ -16,6 +16,6 @@ _start:
     movl $output, %ecx      #move output's address into the ECX register --> contains the first address of the string
     movl $42, %edx          #move 42 into EDX --> length of the string
     int $0x80               #software interrupt, tells the kernel that we want to invoke a syscall (now system write)
-    movl $1, %eax           #moves 1 into EAX --> this is the number of exit syscall
-    movl $0, %ebx           #moves 0 into EBX --> this is the return value of exit, it can be anything, if everything went well we usually write 0 (return 0)
+    movl $1, %eax           #move 1 into EAX --> this is the number of exit syscall
+    movl $0, %ebx           #move 0 into EBX --> this is the return value of exit, it can be anything, if everything went well we usually write 0 (return 0)
     int $0x80               #invokes the exit syscall
