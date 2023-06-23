@@ -1,5 +1,6 @@
 #Write processor's Vendor ID with linux system calls
 #command to make it on 64 bit linux based systems: as -o cpuid.o cpuid.s && ld -o cpuid cpuid.o
+#OR you can use simply: gcc -o cpuid cpuid.s -no-pie BUT in this case you have to use 'main' instead of '_start' entry point
 .section .data
 output:                     
     .ascii "The processor Vendor ID is 'xxxxxxxxxxxx'\n"
