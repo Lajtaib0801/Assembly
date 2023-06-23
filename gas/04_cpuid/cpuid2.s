@@ -1,4 +1,5 @@
 #cpuid with printf (C library calls)
+#command to make it on 64 bit linux based systems: as -o cpuid2.o cpuid2.s --32 && ld -dynamic-linker /lib/ld-linux.so.2 -o cpuid2 -lc cpuid2.o -m elf_i386
 .section .data
 output:
 	.asciz "The processor Vendor ID is '%s'\n"	#asciz adds \0 to the end of the string, ascii doesn't
