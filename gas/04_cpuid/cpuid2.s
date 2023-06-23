@@ -1,7 +1,7 @@
 #cpuid with printf (C library calls)
 .section .data
 output:
-	.asciz "The processor Vendor ID is '%s'\n"	#asciz add \0 to the end of the string, ascii doesn't
+	.asciz "The processor Vendor ID is '%s'\n"	#asciz adds \0 to the end of the string, ascii doesn't
 							#printf expects a null terminated string, so we need it
 .section .bss						#the value of the buffer is not defined, so it goes into the .bss
 	.lcomm buffer, 12				#this will contain the 12 bytes long vendor id
