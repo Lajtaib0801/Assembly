@@ -14,7 +14,7 @@ _start:
 loop:
     movl values(, %edi, 4), %eax                        #moves the values[EDI] element into EAX
     cmp %ebx, %eax                                      #compares EBX, and EAX (2nd operand - 1st operand, 0 <, 0 >, 0 =)
-    cmova %eax, %ebx                                    #if 2nd operand is greater than 1st (EAX>EBX), it moves EAX into EBX
+    cmova %eax, %ebx                                    #if 1st operand is greater than 2nd (EAX>EBX), it moves EAX into EBX
     inc %edi                                            #EDI + 1
     cmp $10, %edi                                       #compares EDI and 10
     jne loop                                            #jump not equal, if EDI is not 10 then jump into the loop label
