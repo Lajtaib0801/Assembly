@@ -8,7 +8,7 @@ values2:
 .section .text
 .globl _start
 _start:
-	movq values1, %mm0										#mm0 and mm1 are 64bit registers		
+	movq values1, %mm0					#mm0 and mm1 are 64bit registers		
 	movq values2, %mm1
 	movl $1, %eax
 	movl $0, %ebx
