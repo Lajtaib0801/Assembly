@@ -3,7 +3,7 @@
 values1:
 	.int 1, -1, 0, 135246
 values2:
-	.quad 1, -1				#quad is 64bit, so this is 128bit data
+	.quad 1, -1		#quad is 64bit, so this is 128bit data
 .section .text
 .globl _start
 _start:
