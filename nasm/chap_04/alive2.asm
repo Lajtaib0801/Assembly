@@ -14,27 +14,27 @@ extern printf
 global	main
 main:
 	push	rbp
-	mov		rbp, rsp
+	mov	rbp, rsp
 ;print msg1
-	mov		rax, 0
-	mov		rdi, fmtstr
-	mov		rsi, msg1
+	mov	rax, 0
+	mov	rdi, fmtstr
+	mov	rsi, msg1
 	call	printf
 ;print msg2
-	mov		rax, 0
-	mov		rdi, fmtstr
-	mov		rsi, msg2
+	mov	rax, 0
+	mov	rdi, fmtstr
+	mov	rsi, msg2
 	call	printf
 ;print radius
-	mov		rax, 0
-	mov		rdi, fmtint
-	mov		rsi, [radius]
+	mov	rax, 0
+	mov	rdi, fmtint
+	mov	rsi, [radius]
 	call	printf
 ;print pi
-	mov		rax, 1
+	mov	rax, 1
 	movq	xmm0, [pi]
-	mov		rdi, fmtflt
+	mov	rdi, fmtflt
 	call	printf
-	mov		rsp, rbp
-	pop		rbp
+	mov	rsp, rbp
+	pop	rbp
 	ret
