@@ -11,25 +11,25 @@ section .text
 global main
 main:
 	push	rbp
-	mov		rbp, rsp
+	mov	rbp, rsp
 	
-	mov		rax, -1				;fill rax with 1s
-	mov		al, BYTE [bNum]		;does not clear upper bits of rax
-	xor		rax, rax			;clear rax
-	mov		al, BYTE [bNum]		;now it has the correct value
+	mov	rax, -1			;fill rax with 1s
+	mov	al, BYTE [bNum]		;does not clear upper bits of rax
+	xor	rax, rax		;clear rax
+	mov	al, BYTE [bNum]		;now it has the correct value
 	
-	mov		rax, -1				;fill rax with 1s
-	mov		ax, WORD [wNum]		;does not clear upper bits of rax
-	xor		rax, rax			;clear rax
-	mov		ax, WORD [wNum]		;now it has the correct value
+	mov	rax, -1			;fill rax with 1s
+	mov	ax, WORD [wNum]		;does not clear upper bits of rax
+	xor	rax, rax		;clear rax
+	mov	ax, WORD [wNum]		;now it has the correct value
 	
-	mov		rax, -1				;fill rax with 1s
-	mov		eax, DWORD [dNum]	;it has the correct value
+	mov	rax, -1			;fill rax with 1s
+	mov	eax, DWORD [dNum]	;it has the correct value
 	
-	mov		rax, -1				;fill rax with 1s
-	mov		rax, QWORD [qNum1]	;does clear upper bits of rax
-	mov		QWORD [qNum2], rax	;one operand is always a ragister
-	mov		rax, 12345			;source operand an immediate value
+	mov	rax, -1			;fill rax with 1s
+	mov	rax, QWORD [qNum1]	;does clear upper bits of rax
+	mov	QWORD [qNum2], rax	;one operand is always a ragister
+	mov	rax, 12345		;source operand an immediate value
 	
 	movq	xmm0, [qNum3]		;instruction for floating point
 	
