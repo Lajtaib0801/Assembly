@@ -21,7 +21,7 @@ bloop:
     mov     rsi, [number]
     mov     rdx, rax
     mov     rax, 0          ;no floating point
-    call printf
+    call    printf
     mov     rbp, rsp
     pop     rbp
     ret
