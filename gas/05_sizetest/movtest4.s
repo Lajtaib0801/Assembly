@@ -11,6 +11,6 @@ _start:
 	movl $values, %edi				#move the memory location of values into EDI	
 	movl $100, 4(%edi)				#overwrite the 2nd element of the values with 100
 	movl $1, %edi					#move 1 into EDI
-	movl values(, %edi, 4), %ebx			#move the 'values[1]' element into EBX (this will be the exit value)
+	movl values(, %edi, 4), %ebx	#move the 'values[1]' element into EBX (this will be the exit value)
 	movl $1, %eax					#move 1 into EAX (exit)
-	int $0x80					#call exit
+	int $0x80					    #call exit

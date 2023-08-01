@@ -3,7 +3,7 @@
 #OR you can use simply: gcc -o sizetest3 sizetest3.s -no-pie BUT in this case you have to use 'main' instead of '_start' entry point
 .section .data
 buffer:
-	.fill 10000
+	.fill 10000         #we create a 10000-byte buffer 'variable', filled with zeros, THIS WILL INCREASE THE EXECUTABLES SIZE BY 10000 aswell
 .section .text
 .globl _start
 _start:
