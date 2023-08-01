@@ -9,7 +9,7 @@ _start:
     movl $0, %eax
 loop1:
     addl %ecx, %eax
-    loop loop1
+    loop loop1          #it'll jump back to 'loop1' every time while the ECX's value is not 0
     pushl %eax
     pushl $output
     call printf
