@@ -27,4 +27,18 @@ end:                        #program exits
     movl $1, %eax           
     movl $0, %ebx
     int $0x80
-    
+
+/*
+a bubble sort algorithm looks like this in a higher level lang. btw
+
+for (int i = array_size - 1; i > 0; i--)
+{
+    for (int j = 0; j < i; j++)
+    {
+        if (array[j] > array[j + 1])
+            swap(array[j], array[j + 1]);
+    }
+}
+*/
+
+
