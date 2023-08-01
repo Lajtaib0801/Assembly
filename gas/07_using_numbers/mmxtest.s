@@ -7,8 +7,8 @@ values2:
 
 .section .text
 .globl _start
-_start:
-	movq values1, %mm0					#mm0 and mm1 are 64bit registers		
+_start:                                 #in mmX registers we can store multiple values => (1 64bit, 2 32bit, 4 16bit, 8 8bit)
+	movq values1, %mm0					#mm0 and mm1 are 64bit registers
 	movq values2, %mm1
 	movl $1, %eax
 	movl $0, %ebx

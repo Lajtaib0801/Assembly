@@ -2,7 +2,7 @@
 
 .section .data
 value1:
-    .double 12.34, 2345.543
+    .double 12.34, 2345.543             #same as in the ssefloat.s, but with 64 values and instructions (movupd)
 value2:
     .double -5439.234, 32121.4
 

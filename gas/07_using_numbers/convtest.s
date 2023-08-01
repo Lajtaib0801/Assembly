@@ -11,9 +11,9 @@ value2:
 .section .text
 .globl _start
 _start:
-    cvtps2dq value1, %xmm0
-    cvttps2dq value1, %xmm1
-    cvtdq2ps value2, %xmm2
+    cvtps2dq value1, %xmm0              #converts single-precision FP to packed double-precision FP
+    cvttps2dq value1, %xmm1             #converts packed single-precision FP to packed doubleword integers
+    cvtdq2ps value2, %xmm2              #converts packed doubleword integers to packed single-prec. FP
     movdqu %xmm0, data
 
     movl $1, %eax
