@@ -16,6 +16,9 @@ main:
     movsd   xmm1, [radius]
     mov     rax, 1
     call    printf
+    mov     rax, 60             ;just for exit with no error (0)
+    mov     rdi, 0
+    syscall
 leave                           ;same as --> mov rsp, rbp; pop rbp
 ret
 
