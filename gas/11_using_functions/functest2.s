@@ -1,9 +1,11 @@
-# functest1.s - An example of using functions
+# functest2.s - An example of using global variables in functions
 .section .data
 precision:
    .byte 0x7f, 0x00
 .section .bss
-   .lcomm value, 4
+   .lcomm radius, 4
+   .lcomm result, 4
+   .lcomm trash, 4
 .section .text
 .globl _start
 _start:
@@ -11,13 +13,13 @@ _start:
    finit
    fldcw precision
 
-   movl $10, %ebx
+   movl $10, radius
    call area
 
-   movl $2, %ebx
+   movl $2, radius
    call area
 
-   movl $120, %ebx
+   movl $120, radius
    call area
 
    movl $1, %eax
@@ -27,8 +29,8 @@ _start:
 .type area, @function
 area:
    fldpi
-   imull %ebx, %ebx
-   movl %ebx, value
-   filds value
+   filds radius
+   fmul %st(0), %st(0)
    fmulp %st(0), %st(1)
+   fstps result
    ret
