@@ -13,7 +13,7 @@ _start:
     leal value1, %esi
     leal output, %edi
     movl $23, %ecx
-    cld
+    cld                 #clears the DF flag --> EDI and ESI will be incremented
 
 loop1:
     movsb

@@ -1,5 +1,4 @@
-#movstest2.s
-
+#reptest2.s - An incorrect example of using the REP instruction
 .section .data
 value1:
     .ascii "This is a test string.\n"
@@ -10,13 +9,12 @@ value1:
 .section .text
 .globl _start
 _start:
-    leal value1+22, %esi
-    leal output+22, %edi
+    leal value1, %esi
+    leal output, %edi
 
-    std                     #set the DF flag --> EDI and ESI will be decremented
-    movsb
-    movsw
-    movsl
+    movl $6, %ecx
+    cld
+    rep movsl
 
     movl $1, %eax
     movl $0, %ebx

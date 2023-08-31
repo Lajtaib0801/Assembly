@@ -1,4 +1,4 @@
-#movstest2.s
+#reptest1.s - An example of using REP instruction
 
 .section .data
 value1:
@@ -10,14 +10,14 @@ value1:
 .section .text
 .globl _start
 _start:
-    leal value1+22, %esi
-    leal output+22, %edi
-
-    std                     #set the DF flag --> EDI and ESI will be decremented
-    movsb
-    movsw
-    movsl
+    leal value1, %esi
+    leal output, %edi
+    
+    movl $23, %ecx
+    cld
+    rep movsb
 
     movl $1, %eax
     movl $0, %ebx
     int $0x80
+    
